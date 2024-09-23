@@ -17,10 +17,6 @@ public class CreateConnection {
 			if(con !=null) {
 				System.out.println("Connected Sucessfully..");
 			}
-			else {
-				System.out.println("Failed to connect!");
-			}
-			
 		}  catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
