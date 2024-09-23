@@ -1,29 +1,30 @@
-package com.program.connection;
+package com.program.readData;
 
+import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-//  1
-public class CreateConnection {
+//  2
+public class CreateStatement {
+
 
 	private static final String url = "jdbc:postgresql://localhost:5432/jdbc";
 	private static final String user = "postgres";
 	private static final String pass = "root";
 	
-	public void getConnectionDataBase() {
+	public void createStatement() {
 		try {
 			//step 1 -> create connection
-			Class.forName("org.postgresql.Driver");
+		
 			Connection con=DriverManager.getConnection(url,user,pass);
-			if(con !=null) {
-				System.out.println("Connected Sucessfully..");
-			}
+			
+			//step 2 -> create statement
+			Statement st= con.createStatement();
+			
+			
 		}  catch (SQLException e) {
 			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}	
+		}
 	}
-	
 }
