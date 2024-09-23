@@ -10,7 +10,7 @@ public class CreateConnection {
 	private static final String user = "postgres";
 	private static final String pass = "root";
 	
-	public void getConnection() {
+	public void getConnectionDataBase() {
 		try {
 			Class.forName("org.postgresql.Driver");
 			Connection con=DriverManager.getConnection(url,user,pass);
