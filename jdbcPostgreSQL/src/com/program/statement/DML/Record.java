@@ -1,4 +1,4 @@
-package com.program.statement.records__I_U_S_D;
+package com.program.statement.DML;
 
 
 /*

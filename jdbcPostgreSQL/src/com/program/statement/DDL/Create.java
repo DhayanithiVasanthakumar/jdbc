@@ -1,4 +1,4 @@
-package com.program.statement.create;
+package com.program.statement.DDL;
 
 public class Create {
 	
