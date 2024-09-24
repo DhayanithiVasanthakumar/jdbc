@@ -11,19 +11,12 @@ public class CreateConnection {
 	private static final String user = "postgres";
 	private static final String pass = "root";
 	
-	
-	
-	//step 1 -> create connection
-	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection(url,user,pass);
-	}
-	
-	public void createConnection() {
+	Connection con;
+	public void getConnectionDataBase() {
 		try {
-			
+			//step 1 -> create connection
 			Class.forName("org.postgresql.Driver");
-			
-			Connection con=getConnection();
+			con=DriverManager.getConnection(url,user,pass);
 			if(con !=null) {
 				System.out.println("Connected Sucessfully..");
 			}
@@ -31,7 +24,13 @@ public class CreateConnection {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		}	
+		}finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 }
