@@ -11,11 +11,19 @@ public class CreateConnection {
 	private static final String user = "postgres";
 	private static final String pass = "root";
 	
-	public void getConnectionDataBase() {
+	
+	
+	//step 1 -> create connection
+	public static Connection getConnection() throws SQLException {
+		return DriverManager.getConnection(url,user,pass);
+	}
+	
+	public void createConnection() {
 		try {
-			//step 1 -> create connection
+			
 			Class.forName("org.postgresql.Driver");
-			Connection con=DriverManager.getConnection(url,user,pass);
+			
+			Connection con=getConnection();
 			if(con !=null) {
 				System.out.println("Connected Sucessfully..");
 			}
