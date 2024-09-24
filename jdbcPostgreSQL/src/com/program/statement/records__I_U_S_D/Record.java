@@ -9,6 +9,12 @@ package com.program.statement.records__I_U_S_D;
  */
 public class Record {
 
+	
+	private static final String url = "jdbc:postgresql://localhost:5432/jdbc";
+	private static final String user = "postgres";
+	private static final String pass = "root";
+	
+	
 	void insertRecords() {
 		
 	}
