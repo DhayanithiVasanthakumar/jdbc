@@ -22,16 +22,13 @@ public class Create {
 			if(con !=null) {
 				System.out.println("Connected Sucessfully..");
 			}
+			
+			//step 5 -> close connection
+			con.close();
 		}  catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		}finally {
-			try {
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 	}
 	
@@ -58,16 +55,13 @@ public class Create {
 			st.executeUpdate(databaseQuery);
 			System.out.println("Database created sucessfully...");
 			
+			//step 5 -> close connection
+			con.close();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		}finally {
-			try {
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 	}
 	

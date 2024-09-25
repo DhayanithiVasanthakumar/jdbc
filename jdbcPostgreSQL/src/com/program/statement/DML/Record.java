@@ -44,16 +44,13 @@ public class Record {
 			st.executeUpdate(tableQuery);
 			System.out.println("Table created sucessfully...");
 
+			//step 5 -> close connection
+			con.close();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		}finally {
-			try {
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 	}
 	
@@ -86,19 +83,16 @@ public class Record {
 			// step 4->execute query
 			st.executeUpdate(insertQuery);
 			System.out.println("Value inserted sucessfully...");
+			
+			//step 5 -> close connection
+			con.close();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		finally {
-			try {
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
+		
 	}
 	
 	
