@@ -60,7 +60,7 @@ public class Record {
 	 */
 	void insertRecords() {
 		// query for table
-		String tableQuery = "INSERT INTO details (sno,sname,rollno,dept)"
+		String insertQuery = "INSERT INTO details (sno,sname,rollno,dept)"
 				+ "VALUES(1,'dhaya',08,'AIDS'),"
 				+ "(2,'aswini',06,'agri'),"
 				+ "(3,'hari',03,'ca'),"
@@ -77,7 +77,7 @@ public class Record {
 			Statement st = con.createStatement();
 
 			// step 4->execute query
-			st.executeUpdate(tableQuery);
+			st.executeUpdate(insertQuery);
 			System.out.println("Value inserted sucessfully...");
 
 		} catch (SQLException e) {
@@ -90,8 +90,9 @@ public class Record {
 	
 	
 	
-	
-	
+	/*
+	 * Update record in table
+	 */
 	void updaterecords() {
 		
 	}

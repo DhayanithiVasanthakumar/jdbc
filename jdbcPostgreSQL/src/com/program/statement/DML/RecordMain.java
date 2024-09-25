@@ -5,7 +5,7 @@ public class RecordMain {
 	public static void main(String[] args) {
 		Record r= new Record();
 		//r.createTable();
-		//r.insertRecords();
+		r.insertRecords();
 	}
 
 }
