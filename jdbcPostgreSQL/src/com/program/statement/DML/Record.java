@@ -48,6 +48,12 @@ public class Record {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+		}finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -60,11 +66,12 @@ public class Record {
 	 */
 	void insertRecords() {
 		// query for table
-		String insertQuery = "INSERT INTO details (sno,sname,rollno,dept)"
-				+ "VALUES(1,'dhaya',08,'AIDS'),"
-				+ "(2,'aswini',06,'agri'),"
-				+ "(3,'hari',03,'ca'),"
-				+ "(4,'nare',13,'EEE');";
+		String insertQuery = "INSERT INTO details (sno,sname,rollno,dept)\r\n"
+				+ "				 VALUES(1,'dhaya',08,'AIDS'),\r\n"
+				+ "				 (2,'aswini',06,'agri'),\r\n"
+				+ "				 (3,'hari',03,'ca'),\r\n"
+				+ "				 (4,'nare',13,'EEE'),"
+				+ "				(5,'partha',09,'cse');";
 
 		try {
 			// step 1 -> register the driver
@@ -84,6 +91,13 @@ public class Record {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
+		}
+		finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	
