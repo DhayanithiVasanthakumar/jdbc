@@ -7,6 +7,7 @@ public class RecordMain {
 		//r.createTable();
 		r.insertRecords();
 	}
+	
 
 }
 
